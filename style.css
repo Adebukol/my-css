@@ -82,10 +82,7 @@ margin-bottom: 5px;
 .single-product{
   margin-top: 80px;
 }
-.single-product .col-1 img{
-padding: 0px;
-border-radius: 15px;
-}
+
 .company-name{
   margin-bottom: 20px;
   color:hsl(26, 100%, 55%);
@@ -100,28 +97,69 @@ border-radius: 15px;
   font-size: 50px;
   margin-bottom: 40px;
 }
-
-.single-product h4{
+.description{
+  line-height: 1.5rem;
+  margin-bottom: 30px;
+  color: hsl(220, 14%, 75%);
+  font-weight: 700;
+}
+.single-product h2{
   margin: 20px 0;
-  font-size: 22px;
-  font-weight: bold;
+  font-size: 30px;
+  font-weight: 700;
 }
-.single-product select{
-  display: block;
-  padding: 10px;
-  margin-top: 20px;
+span{
+  text-decoration:line-through;
+  color: hsl(220, 14%, 75%);
+  font-weight: 700;
+  margin-bottom: 30px;
 }
-.single-product input{
-  width: 50px;
-  height: 30px;
-  padding-left: 10px;
+.discount{
+  color: hsl(26, 100%, 55%);
+  background: hsl(25, 100%, 94%);
+  padding: 5px;
   font-size: 16px;
+  text-decoration: none;
+}
+.wrap{
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+.count{ 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px  ;
+  background: hsl(223, 64%, 98%);
+  margin-right: 20px;
+  border-radius: 8px;
+  width: 30%;
+}
+#countQuantity{
+  margin-left: 20px;
+  margin-right: 20px;
+  font-weight: 700;
+}
+button{
+  padding: 5px;
+  border: none;
+  background: transparent;
+}
+.cart-btn{
   margin-right: 10px;
-  border: 1px solid #DA5726;
 }
-input:focus{
-  outline: none;
+.add-btn{
+  background: hsl(26, 100%, 55%);
+  color: #fff;
+  font-weight: 700;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 40%;
 }
+
+
 
 .thumbnail{
   display: flex;
