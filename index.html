@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" media="screen and (max-width: 600px)" href="style.css">
+  <link rel="stylesheet" media="screen and (max-width: 1024px)" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html"><img src="images/logo.svg"></a>
+      </div>
+     
+      <nav>
+        <ul id="navlinks">
+          <li><a href="index.html"> Collections</a></li>
+          <li><a href="product.html">Men</a></li>
+          <li><a href="form.html">Women</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          
+        </ul>
+      </nav>
+      <div class="menu-images">
+        <img src="images/icon-cart.svg" class="cart">
+        <img src="images/image-avatar.png" class="avatar">
+        <img src="images/icon-menu.svg" class="hamburger" onclick="menutoggle()">
+    </div>
+    </div>
+    
+<!----------------------------------------------------------------------single Product details---------------------------------------------->
+<div class="small-container single-product">
+  <div class="row">
+    <div class="col-1">
+      <img src="images/image-product-1.jpg" width="100%" id="product-img">
+      <div class="thumbnail">
+        <div class="small-img-col">
+          <img src="images/image-product-1-thumbnail.jpg" width="100%" class="product-thumbnail">
+        </div>
+        <div class="small-img-col">
+          <img src="images/image-product-2-thumbnail.jpg" width="100%" class="product-thumbnail">
+        </div>
+        <div class="small-img-col">
+          <img src="images/image-product-3-thumbnail.jpg" width="100%" class="product-thumbnail">
+        </div>
+        <div class="small-img-col">
+          <img src="images/image-product-4-thumbnail.jpg" width="100%" class="product-thumbnail">
+        </div>
+      </div>
+    </div>
+    <div class="col-1 text">
+      <p class="company-name">SNEAKER COMPANY</p>
+      <h1>Fall Limited Edition<br> Sneakers</h1>
+      <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
+        durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+      <h2>$125.00</h2><p>50%</p>
+      <span>$250.00</span>
+      <div class="wrap">
+        <div class="count">
+          <img src="images/icon-minus.svg" alt="">
+          <p id="countQuantity">0</p>
+          <img src="images/icon-plus.svg" alt="">
+        </div>
+        <button class="add-btn"><img src="images/icon-cart.svg">Add to cart</button>
+      </div>        
+    </div>
+    </div>
+  </div>
+</div>
+<!--------------------------------------------------footer------------------------------------------------->
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="site.js"></script>
+</body>
+</html>
