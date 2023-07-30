@@ -183,10 +183,45 @@ button{
 }
 
 .small-img-col img:hover{
-  opacity: 50%;
+  /* opacity: 50%; */
   transform: translateY(5px);
   border: 3px solid hsl(26, 100%, 55%);
+  background-color: hsl(0, 0%, 100%);
 }
+
+.overlay{
+  display: none;
+  position: absolute;
+  background: hsla(0, 0%, 0%, 0.75);
+  top:0;
+  z-index: 2;
+  width: 100%;
+  /* padding: 200px; */
+}
+.col-2{
+  padding: 100px 450px 100px 450px;
+  position: relative;
+}
+.close-thumbnail{
+  display: block;
+  margin: 20px 90%;
+  cursor: pointer;
+}
+/* .close-thumbnail:hover{
+  fill: white;
+  cursor: pointer;
+} */
+.next, .previous{
+  width: 45px;
+  height: 45px;
+  padding: 15px;
+  position: absolute;
+  top: 400px;
+  border-radius:50% ;
+  background: hsl(223, 64%, 98%);
+  margin-left: -25px;
+}
+
 .attribution { 
   font-size: 11px; text-align: center; 
 }
