@@ -42,21 +42,24 @@ nav ul li{
   margin-right: 30px;
   text-align: right;
 }
-a{
+nav ul li a{
   text-decoration: none;
   color: #393838;
   font-size: 13px;
   font-weight: 400;
   padding-bottom: 42px;
+  cursor: pointer;
 }
-a:hover{
+nav ul li a:hover{
   color: hsl(219, 9%, 45%);
   font-weight: 700;
   border-bottom: 3px solid hsl(26, 100%, 55%) ;
+  cursor: pointer;
 }
 .cart{
 margin-right: 30px;
 margin-bottom: 5px;
+cursor: pointer;
 }
 .hamburger{
   display: none;
@@ -68,6 +71,7 @@ margin-bottom: 5px;
   border-radius: 50%;
   width: 40px;
   height: 40px;
+  cursor: pointer;
 }
 
 
@@ -77,13 +81,16 @@ margin-bottom: 5px;
   align-items: center;
 }
 .small-container{
-  padding: 40px 100px;
+  padding: 80px 100px 150px 100px;
 }
 .small-container .text{
   margin-left: 120px;
 }
 .single-product{
-  margin-top: 80px;
+  margin-top: 0px;
+}
+.main-product{
+  border-radius: 15px;
 }
 
 .company-name{
@@ -138,6 +145,7 @@ span{
   margin-right: 20px;
   border-radius: 8px;
   width: 30%;
+  cursor: pointer;
 }
 #countQuantity{
   margin-left: 20px;
@@ -148,6 +156,7 @@ button{
   padding: 5px;
   border: none;
   background: transparent;
+  cursor: pointer;
 }
 .cart-btn{
   margin-right: 10px;
@@ -160,6 +169,7 @@ button{
   border-radius: 8px;
   font-size: 16px;
   width: 40%;
+  cursor: pointer;
 }
 .previous-btn, .next-btn{
   display: none;
@@ -186,7 +196,7 @@ button{
   /* opacity: 50%; */
   transform: translateY(5px);
   border: 3px solid hsl(26, 100%, 55%);
-  background-color: hsl(0, 0%, 100%);
+  background: hsl(0, 0%, 100%);
 }
 
 .overlay{
@@ -202,7 +212,7 @@ button{
   padding: 100px 450px 100px 450px;
   position: relative;
 }
-.close-thumbnail{
+#close-thumbnail{
   display: block;
   margin: 20px 90%;
   cursor: pointer;
@@ -221,9 +231,66 @@ button{
   background: hsl(223, 64%, 98%);
   margin-left: -25px;
 }
+/* --------------------cart */
+#count{
+  display: none;
+}
+.my-cart{
+  display: none;
+  width: 30%;
+  height: 35%;
+  position: absolute;
+  top:100px;
+  right: 35px;
+  z-index: 1;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: rgba(17, 12, 46,0.15) 0px 48px 100px 0px;
+}
+.cart-heading{
+  border-bottom: 1px solid hsl(220, 14%, 75%);
+  padding:30px 0px 40px 30px;
+  
+}
+#cart-text{
+  padding: 100px;
+  text-align: center;
+}
 
+.p-img{
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.cart-details{
+  align-items: center;
+  display: flex;
+  width: 100%;
+  padding: 20px;
+}
+.bottom{
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.bottom p{
+  margin-bottom: 10px;
+}
+.icon-delete{
+  margin-left: 60%;
+}
+.checkout{
+  width: 90%;
+  padding: 20px;
+  display: block;
+  margin: auto 20px;
+}
+/* -------------footer */
 .attribution { 
-  font-size: 11px; text-align: center; 
+  font-size: 11px; 
+  text-align: center; 
+  margin-top: -100px;
 }
     .attribution a { 
       color: hsl(228, 45%, 44%); 
@@ -232,9 +299,10 @@ button{
 
  @media screen and (max-width: 800px) {
   .container{
-    padding: 20px 20px;
+   padding: 0px; 
   }
 .navbar{
+  padding: 20px 20px;
   border-bottom: 0px;
   padding-bottom: 0px;
   /* display: flex;
@@ -305,13 +373,14 @@ button{
   }
   .previous-btn{
     position: absolute;
-    top: 190px;
-    right: 250px;
+    top: 250px;
+    left: 20px;
+    /* left: 250px; */
   }
   .next-btn{
     position: absolute;
-    bottom: 335px;
-    left: 250px;
+  right: 20px;
+  top: 250px;
   }
   /* ----------------------------------------hero------------- */
 .row{
@@ -319,8 +388,12 @@ button{
   justify-content: center;
 }
 #product-img{
+  /* padding: -10px; */
+  width: 100%;
+  
+}
+.main-product{
   border-radius: 0px;
-  padding: 0px;
 }
 .thumbnail{
   display: none;
@@ -330,6 +403,7 @@ button{
 }
 .small-container .text{
   margin-left: 0px;
+  padding: 20px 20px;
 }
 .single-product{
   margin-top: 20px;
@@ -349,8 +423,11 @@ button{
   font-size: 20px;
   font-weight: 700;
 }
-span{
-  flex: 1;
+
+.mobile-view{
+  position: absolute;
+  bottom: 100px;
+  right: 30px;
 }
 .wrap{
   flex-direction: column;
@@ -362,5 +439,29 @@ span{
 .add-btn{
   margin-top: 10px;
   width: 100%;
+}
+
+/* --------------------cart */
+.my-cart{
+  width: 90%;
+  right: 0px;
+  height: 30%;
+  margin: auto 20px;
+  position: absolute;
+  top:80px;
+}
+#fullCart{
+  height: 32%;
+  max-height: 100%;
+}
+.checkout{
+  width: 90%;
+  margin: auto;
+}
+.cart-details{
+  padding-bottom: 20px;
+}
+.attribution{
+  margin-top: 0px;
 }
  }
