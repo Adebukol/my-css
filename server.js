@@ -33,16 +33,19 @@ function seeCart(){
     navLinks.style.display = "block"
   }
   const overlay =document.getElementById('overlay');
-  const closeOverlay = document.getElementById('close-thumbail');
-  console.log(closeOverlay);
+  const closeLay = document.getElementById('close-thumbail');
   // closeOverlay.addEventListener("click", function(){
   //   overlay.style.display = 'none';
   // })
   const showOverlay = document.querySelectorAll(".product-thumbnail");
   
   //.addEventListener("click", myOverlay);
-  function myOverlay(showOverlay){
+  function myOverlay(){
     overlay.style.display = "block";
+  }
+  function closeOverlay(){
+    overlay.style.display = "none";
+    closeOverlay.src="images\icon-plus.svg";
   }
  
 // js for product details page----------------------------------
@@ -53,6 +56,15 @@ const prevButton = document.getElementById('previousBtn');
 
 
 nextButton.onclick = function(){
+  productImg.src = "images/image-product-1.jpg";
+  productImg.src = "images/image-product-2.jpg";
+  productImg.src = "images/image-product-3.jpg";
+  // productImg.src = "images/image-product-4.jpg";
+}
+prevButton.onclick = function(){
+  productImg.src = "images/image-product-4.jpg";
+  productImg.src = "images/image-product-3.jpg";
+  productImg.src = "images/image-product-2.jpg";
   productImg.src = "images/image-product-1.jpg";
 }
 thumbnail[1].onclick = function(){
