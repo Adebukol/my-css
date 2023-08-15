@@ -45,7 +45,7 @@ function seeCart(){
   }
   function closeOverlay(){
     overlay.style.display = "none";
-    closeOverlay.src="images\icon-plus.svg";
+    closeOverlay.src="images/icon-plus.svg";
   }
  
 // js for product details page----------------------------------
@@ -77,6 +77,83 @@ thumbnail[3].onclick = function(){
   productImg.src = "images/image-product-4.jpg";
 }
 
+// mobile preview
+const prevImg = document.getElementById('prevImg');
+const nextImg = document.getElementById('nextImg');
+const image = document.getElementById('mobileImg');
+
+const images = ['images/image-product-1.jpg','images/image-product-2.jpg','images/image-product-3.jpg', 'images/image-product-4.jpg']; // Add your image URLs here
+let currentIndex = 0;
+
+function showImage(index) {
+  if (index < 0) {
+    currentIndex = images.length - 1;
+  } else if (index >= images.length) {
+    currentIndex = 0;
+  }
+  image.src = images[currentIndex];
+}
+
+prevImg.addEventListener('click', () => {
+  currentIndex--;
+  showImage(currentIndex);
+});
+
+nextImg.addEventListener('click', () => {
+  currentIndex++;
+  showImage(currentIndex);
+});
+
+showImage(currentIndex); 
+
+
+
+ // Function to update cart icon and count
+ function updateCartUI() {
+  const cartCount = document.getElementById('count');
+  const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+  console.log(cart);
+  cartCount.textContent = cart.length;
+}
+
+// Function to add a product to cart
+function addToCart(product) {
+  const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+  cart.push(product);
+  localStorage.setItem('cart', JSON.stringify(cart));
+  updateCartUI();
+}
+
+// Add event listeners to "Add to Cart" buttons
+const addToCartButtons = document.querySelectorAll('.add-btn');
+addToCartButtons.forEach(button => {
+  button.addEventListener('click', () => {
+      const product = button.getAttribute('data-product');
+      addToCart(product);
+  });
+});
+
+// Initial cart UI update
+updateCartUI();
+// Display initial image
+// const nextImg = document.getElementById('nextImg');
+// console.log(nextImg);
+// const prevImg = document.getElementById('prevImg');
+// const product = document.getElementsByClassName("main-img");
+// console.log(product);
+
+// nextImg.onclick = function(){
+//   product.src = "images/image-product-1.jpg";
+//   product.src = "images/image-product-2.jpg";
+//   product.src = "images/image-product-3.jpg";
+//   // productImg.src = "images/image-product-4.jpg";
+// }
+// prevImg.onclick = function(){
+//   productImg.src = "images/image-product-4.jpg";
+//   productImg.src = "images/image-product-3.jpg";
+//   productImg.src = "images/image-product-2.jpg";
+//   productImg.src = "images/image-product-1.jpg";
+// }
 
 //-----------------cartjs
 // const product = [

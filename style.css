@@ -61,6 +61,14 @@ margin-right: 30px;
 margin-bottom: 5px;
 cursor: pointer;
 }
+#count{
+  color: hsl(26, 100%, 55%);
+  position: absolute;
+  top:40px;
+  right: 170px;
+  text-decoration: none;
+
+}
 .hamburger{
   display: none;
 }
@@ -122,7 +130,7 @@ span{
   text-decoration:line-through;
   color: hsl(220, 14%, 75%);
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
 .discount{
   color: hsl(26, 100%, 55%);
@@ -233,7 +241,7 @@ button{
 }
 /* --------------------cart */
 #count{
-  display: none;
+  display: block;
 }
 .my-cart{
   display: none;
@@ -348,7 +356,7 @@ button{
     display: block;
   }
   .cart{
-   margin: 0px 10px 4px 30px ;
+   margin: 0px 0px 4px 30px ;
   }
   .hamburger{
     display: block;
@@ -426,7 +434,7 @@ button{
 
 .mobile-view{
   position: absolute;
-  bottom: 100px;
+  bottom: 120px;
   right: 30px;
 }
 .wrap{
@@ -440,7 +448,10 @@ button{
   margin-top: 10px;
   width: 100%;
 }
-
+#count{
+  top:10px;
+  right: 40px;
+}
 /* --------------------cart */
 .my-cart{
   width: 90%;
@@ -450,13 +461,18 @@ button{
   position: absolute;
   top:80px;
 }
+.cart-heading{
+  padding: 20px 0px 10px 20px;
+  font-size: 20px;
+}
 #fullCart{
-  height: 32%;
+  height: 40%;
   max-height: 100%;
 }
 .checkout{
   width: 90%;
   margin: auto;
+  padding: 15px;
 }
 .cart-details{
   padding-bottom: 20px;
