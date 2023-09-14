@@ -66,17 +66,17 @@
       <span class="mobile-view">$250.00</span>
       <div class="wrap">
         <div class="count">
-          <button><img src="images/icon-minus.svg" alt="" onclick="decreament()"></button>
+          <button><img src="images/icon-minus.svg" alt="" onclick="decrement()"></button>
           <p id="countQuantity">0</p>
-          <button><img src="images/icon-plus.svg" alt="" onclick="increament()"></button>
+          <button><img src="images/icon-plus.svg" alt="" onclick="increment()"></button>
         </div>
-        <button class="add-btn" data-product="Product 1"><img class="cart-btn" src="images/icon-whitecart.svg">Add to cart</button>
+        <button class="add-btn" data-product="Product"><img class="cart-btn" src="images/icon-whitecart.svg">Add to cart</button>
       </div>        
     </div>
     </div>
   </div>
   <!-- My cart empty -->
-  <div class="my-cart">
+  <div class="my-cart" id="emptyCart">
     <h2 class="cart-heading">Cart</h2>
     <p id="cart-text">Your cart is empty</p>
   </div>
@@ -86,10 +86,12 @@
     <h2 class="cart-heading">Cart</h2>
      <div class="cart-details">
         <img class="p-img" src="images/image-product-1.jpg">
+        <ul class="cart-items"></ul>
         <div class="bottom">
+          <p>Total Price<span class="total-price">0</span></p>
           <p>Fall Limited Edition Sneakers</p>
           <small>$125.00</small>
-          <img src="images/icon-delete.svg" class="icon-delete">
+          <img src="images/icon-delete.svg" class="icon-delete" id="deleteItem">
         </div>
        
       </div>
